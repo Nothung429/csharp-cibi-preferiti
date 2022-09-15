@@ -16,6 +16,16 @@ Console.WriteLine($"Cibo preferito: {favourite}");
 string hated = foods.Last();
 Console.WriteLine($"Cibo odiato: {hated}");
 
-int im = lengthOfFoods / 2;
-string mediana = foods[im];
-Console.WriteLine($"Cibo mediano: {mediana}");
+if(lengthOfFoods % 2 == 0)
+{
+    int im = lengthOfFoods / 2;
+    int im1 = lengthOfFoods / 2 - 1;
+    string mediana = $"{foods[im]} e {foods[im1]}";
+    Console.WriteLine($"Cibo mediano pari: {mediana}");
+}
+else
+{
+    int im = lengthOfFoods / 2;
+    string mediana = foods[im];
+    Console.WriteLine($"Cibo mediano dispari: {mediana}");
+}
